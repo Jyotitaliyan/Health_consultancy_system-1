@@ -124,14 +124,19 @@ section .section-bg-box{
 	padding: 150px 0;
 }
 section .section-bg-box h1{
-	background: green;
+	background: #fb1c11;
 	color: white;
 	font-size: 50px;
 	width: 50%;
 	margin: auto;
 }
+
+section .section-bg-box .vaccine{
+	text-decoration: none;
+	color: white;
+}
 section .section-bg-box h2{
-	background: blue;
+	background: #3a98d0;
 	color: white;
 	width: 50%;
 	margin: auto;
