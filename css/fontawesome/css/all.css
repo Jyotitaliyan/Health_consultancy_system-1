@@ -2142,8 +2142,8 @@ readers do not read off random characters that represent icons */
 .fa-horse-head:before {
   content: "\f7ab"; }
 
-.fa-hospital:before {
-  content: "\f0f8"; }
+/* .fa-hospital:before {
+  content: "\f0f8"; } */
 
 .fa-hospital-alt:before {
   content: "\f47d"; }
