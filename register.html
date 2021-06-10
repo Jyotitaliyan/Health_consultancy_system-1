@@ -6,32 +6,48 @@
 	<meta name="keywords" content="HOSPITAL,HOSPITAL.COM,HOSPITAL WEBSITE, MEDICAN">
 	<meta name="description" content="india's best hospital website of indian">
 	<meta name="author" content="hospital.com">
-	<title>hospital.com</title>
-	<link rel="stylesheet" type="text/css" href="/css/index.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.css"> -->
+	<title>consultDoc.com</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/animate.css"> -->
+	<style>
+		.button {
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		}
+		.button2 {background-color: rgb(243, 22, 22);}
+	</style>
 </head>
 <body>
 <!-- Start Header Coding-->
 <header class="main-header">
+
 	<div class="menu">
 		<!-- Start Brand name coding-->
 		<div class="brand-name">
 			<a href="index.html">
 				<h2 class="animated flash">
 				<i class="fa fa-hospital"></i>&nbsp;
-				HOSPITAL.COM</h2>
+				consultDoc.com</h2>
 			</a>
 		</div>
 		<!-- End Brand name coding-->
 		<!-- Start Nav coding & menu coding -->
          <nav>
          	<ul>
-         		<li><a href="index.html">Home</a></li>
-         		<li><a href="gallery.html">Gallery</a></li>
-         		<li><a href="register.html">Register</a></li>
-         		<li><a href="login.html">Login</a></li>
-         		<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="gallery.html">Diseases</a></li>
+			   <li><a href="doctor.html">Doctor</a></li>
+				<li><a href="register.html">Register</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
          	</ul>
          </nav>
 		<!-- End Nav coding & menu coding -->
@@ -44,7 +60,7 @@
      <div class="form-box">
      	<h1>User Registration Page</h1>
      	<hr>
-     	<form>
+		 <!-- <form> -->
 				<label for="name"><b>Name :</b></label><br/>
 				<input type="text" name="name" id="name" />
 				<br/><br/>
@@ -56,6 +72,20 @@
 				<label for="mobile"><b>Mobile :</b></label><br/>
 				<input type="number" name="mobile" id="mobile" />
 				<br/><br/>
+
+
+				<label for="role"><b>Select Role  :</b></label><br/>
+					<select class="form-control"   [(ngModel)]="selectedSearchCriteria" (change)="selectSearchCriteria($event.target.value)">
+						
+						<option value="User">User</option>
+						<option value="Doctor">Doctor</option>
+						<option value="Admin">Admin</option>
+						
+					</select>
+				
+				
+					<br/><br/>
+				
 
 				<label for="username"><b>Username :</b></label><br/>
 				<input type="text" name="username" id="username" />
@@ -71,12 +101,26 @@
 				<input type="password" name="re-password" id="re-password" />
 				<br/><br/>
 
-				<button type="submit" id="register-btn">Submit</button>
 				
-			</form>
+				
+	
+				<a href="index.html">
+					<button type="submit" id="register-btn">Submit</button>
+				</a>
+				
+			<!-- </form> -->
+				
+
      </div>
     </div>
+	<script>         
+		document.getElementById("register-btn").addEventListener("click", function(){             
+				alert("Registration Done Successfully!");             
+		});
+		
+	</script>
 </section>
+
 <!-- End Section Coding-->
 <!-- Start Footer Coding-->
 <footer>
